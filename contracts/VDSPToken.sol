@@ -45,7 +45,7 @@ contract VDSPToken {
     
     function transferFrom(address from, address to, uint256 value) public returns (bool success) {
         require(balanceOf[from] >= value, "Insufficient balance");
-        require(allowance[from][msg.sender] >= value, "Insufficient allowanc");
+        require(allowance[from][msg.sender] >= value, "Insufficient allowan");
         require(to != address(0), "Invalid address");
         
         balanceOf[from] -= value;
